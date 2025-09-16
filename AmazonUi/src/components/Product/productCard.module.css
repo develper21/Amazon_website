@@ -1,0 +1,168 @@
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  padding: 16px;
+  width: 220px;
+  align-items: center;
+  margin: 0 10px;
+  position: relative;
+  text-decoration: none;
+  transition: box-shadow 0.3s, transform 0.3s;
+  overflow: hidden;
+}
+.card > * {
+  text-decoration: none;
+}
+.imgWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.imgHoverOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  border-radius: 12px;
+}
+.card:hover .imgHoverOverlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18), 0 1.5px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-6px) scale(1.03);
+  cursor: pointer;
+}
+.img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  cursor: pointer;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  transition: transform 0.3s ease-out;
+}
+.viewBtn,
+.addToCartBtn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s, top 0.25s,
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+  width: 90px;
+  min-width: 100px;
+  font-size: 0.85rem;
+  padding: 6px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.viewBtn {
+  top: 60px;
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s;
+}
+.addToCartBtn {
+  top: 150px;
+  background: #ff6200;
+  color: #fff;
+  width: 80%;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  font-size: 0.85rem;
+  gap: 6px;
+  padding: 5px 12px;
+}
+.cartIcon {
+  font-size: 1rem;
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+}
+.card:hover .viewBtn,
+.card:hover .addToCartBtn {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) scale(1);
+}
+.info {
+  margin-top: 10px;
+}
+.title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 2px 0;
+  color: #222;
+  min-height: 38px;
+}
+.category {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 4px;
+}
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+.ratingValue {
+  font-weight: 600;
+  margin-left: 2px;
+}
+.reviews {
+  color: #888;
+  font-size: 0.7rem;
+  margin-left: 1px;
+}
+.reviewsSmall {
+  color: #888;
+  font-size: 0.7rem;
+  margin-left: 2px;
+}
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #222 !important;
+}
+.oldPrice {
+  font-size: 0.9rem;
+  color: #888;
+  text-decoration: line-through;
+}
+.discount {
+  color: #e53935;
+  font-size: 0.8rem;
+  font-weight: 700;
+}

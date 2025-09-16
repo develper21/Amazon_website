@@ -1,0 +1,666 @@
+/* Ensure all links in the mobile menu are white and have no default link color */
+.mobileMenu a,
+.mobileMenu a:visited,
+.mobileMenu a:active {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+.headerWrapper {
+  width: 100%;
+  background: #131921;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 16px;
+  background: #131921;
+  height: 60px;
+  min-height: 60px;
+  box-sizing: border-box;
+}
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+.menuBtn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  display: none;
+  cursor: pointer;
+}
+.logo {
+  height: 32px;
+  margin-right: 8px;
+  border: 1px solid transparent;
+}
+
+.logo:hover {
+  border-color: white;
+  cursor: pointer;
+}
+.deliverTo {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 0.7rem;
+  margin-left: 8px;
+  gap: 4px;
+  border: 1px solid transparent;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.deliverTo:hover {
+  border-color: white;
+  cursor: pointer;
+}
+.deliverTextWrap {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.deliverLabel {
+  color: #ccc;
+  font-size: 0.65rem;
+  line-height: 1;
+}
+.deliverCountry {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+.locationIcon {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-right: 2px;
+  stroke: #ff9900;
+  stroke-width: 30;
+  fill: none;
+}
+.searchBar {
+  display: flex;
+  flex: 1 1 0%;
+  min-width: 0;
+  max-width: 700px;
+  margin: 0 16px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 0.5px solid #ff9900;
+  height: 75%;
+  min-height: 40px;
+  max-height: 54px;
+  align-items: center;
+  box-shadow: 0 2px 6px 0 rgba(20, 110, 180, 0.04);
+  font-family: inherit;
+}
+.searchDropdown {
+  border: none;
+  background: #f2f2f2;
+  padding: 8px 6px;
+  font-size: 0.8rem;
+  color: #232f3e;
+  min-width: 24px;
+  width: 48px;
+  height: 100%;
+  border-right: 1px solid #ddd;
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+  /* Accessibility: add title for screen readers */
+}
+
+/* Add cross-browser support for text-size-adjust */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Add cross-browser support for user-select */
+* {
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+/* Add cross-browser support for backdrop-filter if used */
+.backdropFilter {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* Add cross-browser support for height: stretch if used */
+.stretchHeight {
+  height: -webkit-fill-available;
+  height: stretch;
+}
+.searchInput {
+  flex: 1 1 0%;
+  min-width: 0;
+  border: none;
+  padding: 12px 10px;
+  font-size: 1.05rem;
+  color: #232f3e;
+  background: transparent;
+  height: 100%;
+  font-family: inherit;
+}
+.searchInput::placeholder {
+  color: #888;
+  opacity: 1;
+}
+.searchBtn {
+  background: #ff9900;
+  border: none;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: #000000;
+  height: 100%;
+  border-radius: 0 6px 6px 0;
+  transition: background 0.2s;
+  font-weight: 500;
+  font-family: inherit;
+}
+.searchBtn svg {
+  font-weight: 400;
+  stroke-width: 1.5;
+}
+.searchBtn:hover {
+  background: #ffa41c;
+}
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+.langWrap,
+.cartWrap {
+  position: relative;
+  padding: 0 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+  border: 1px solid transparent;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.langWrap:hover,
+.cartWrap:hover {
+  border-color: white;
+}
+.accountWrap,
+.ordersWrap {
+  position: relative;
+  padding: 0 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  border: 1px solid transparent;
+  height: 40px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.accountWrap:hover,
+.ordersWrap:hover {
+  border-color: white;
+}
+.flag {
+  width: 24px;
+  height: 30px;
+  margin-right: 4px;
+}
+.langText {
+  font-size: 0.9rem;
+}
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  color: #111;
+  min-width: 140px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  border-radius: 4px;
+  padding: 5px;
+}
+.dropdownMenu > div {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.dropdownMenu > div:hover {
+  background: #f3f3f3;
+}
+.smallText {
+  font-size: 0.75rem;
+  color: #ccc;
+}
+.boldText {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+.cartWrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: row;
+  gap: 2px;
+  text-decoration: none !important;
+}
+.cartIcon {
+  font-size: 2rem;
+  color: #fff;
+  margin-right: 2px;
+}
+.cartText {
+  margin-left: 4px;
+  display: inline;
+  font-size: 1rem;
+  color: #fff;
+}
+.cartCount {
+  position: absolute;
+  top: -10px;
+  left: 18px;
+  background: none;
+  color: #ff9900;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 2;
+  padding: 0;
+}
+.bottomRow {
+  display: flex;
+  align-items: center;
+  background: #232f3e;
+  padding: 6px 16px;
+  gap: 10px;
+}
+.navLink {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #fff;
+  padding: 3px 6px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  border: 1px solid transparent;
+}
+.navLink:hover {
+  background: #37475a;
+  border-color: white;
+}
+.navLinkWithIcon {
+  display: flex;
+  align-items: center;
+}
+
+.navIcon {
+  margin-right: 5px;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.mobileMenu {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  background-color: #131921;
+  color: #fff;
+  z-index: 2001;
+  padding-top: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-100%);
+}
+
+.mobileMenuOpen {
+  display: block;
+  transform: translateX(0);
+}
+
+.menuCloseBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.mobileMenuHeader {
+  background-color: #232f3e;
+  color: white;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.mobileMenuItem {
+  padding: 15px 20px;
+  border-bottom: 1px solid #232f3e;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.mobileMenuItem:hover {
+  background-color: #232f3e;
+}
+
+.accountIcon {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.chevronIcon {
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+.deliverToMobile {
+  display: none;
+  background-color: #37475a;
+  color: #fff !important;
+  color: #fff !important;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  align-items: center;
+  gap: 5px;
+}
+
+.hideOnMobile {
+  display: flex;
+}
+
+.showOnMobile {
+  display: none !important;
+}
+.showOnMobileFlex {
+  display: none !important;
+}
+
+.headerHidden {
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.headerTopFixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.bottomRowHidden {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .searchBar {
+    max-width: 350px;
+    min-height: 40px;
+  }
+  .bottomRow {
+    gap: 10px;
+    font-size: 0.9rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .bottomRow::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: auto;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  .leftSection {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    order: 1;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+
+  .logo {
+    margin-right: 0;
+    height: 28px;
+  }
+
+  .deliverTo {
+    display: none;
+  }
+  .deliverToDesktop {
+    display: none !important;
+  }
+
+  .searchBar {
+    width: 100%;
+    margin: 10px 0 10px 0;
+    max-width: none;
+    height: 40px;
+    order: 3;
+    flex: 0 0 100%;
+  }
+
+  .searchInput {
+    font-size: 0.95rem;
+  }
+  .searchDropdown {
+    font-size: 0.75rem;
+  }
+
+  .rightSection {
+    order: 2;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .hideOnMobile {
+    display: none !important;
+  }
+
+  .showOnMobile {
+    display: block !important;
+  }
+  .showOnMobileFlex {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .accountWrap {
+    padding: 0 4px;
+  }
+
+  .signInMobile .accountIcon {
+    font-size: 1.3rem;
+    margin-right: 5px;
+  }
+
+  .chevronIconMobileSignIn {
+    font-size: 0.7rem;
+    margin-left: 3px;
+  }
+
+  .cartWrap {
+    padding: 0 4px;
+  }
+  .cartIcon {
+    font-size: 1.8rem;
+  }
+  .cartText {
+    display: none;
+  }
+  .cartCount {
+    left: 18px;
+    top: -10px;
+    font-size: 0.9rem;
+  }
+
+  .bottomRow {
+    padding: 6px 10px;
+    gap: 8px;
+  }
+
+  .navLink {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+  .navLink .menuIcon {
+    font-size: 1.2rem;
+  }
+
+  .deliverToMobile {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #37475a;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    align-items: center;
+    gap: 5px;
+    box-sizing: border-box;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 28px;
+  }
+  .searchBar {
+    height: 38px;
+  }
+  .searchInput {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+  }
+  .searchBtn {
+    padding: 0 12px;
+    font-size: 1.1rem;
+  }
+  .navLink {
+    font-size: 0.75rem;
+    padding: 3px 6px;
+  }
+  .mobileMenuHeader {
+    padding: 12px 15px;
+    font-size: 1.1rem;
+  }
+  .mobileMenuItem {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+  .deliverToMobile {
+    font-size: 0.8rem;
+    padding: 7px 10px;
+  }
+}
+
+.hideOnDesktopFlex {
+  display: none !important;
+}
+
+.logoLink {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.boldText,
+.smallText {
+  color: #fff !important;
+}
+
+.accountWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  border: 1px solid transparent;
+  height: 40px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.accountWrap > span,
+.accountWrap > a {
+  display: block;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.accountWrap > a {
+  margin-top: 2px;
+}
+
+.dropdownMenu a {
+  color: #111 !important;
+  display: block;
+  padding: 6px 0;
+  text-decoration: none;
+}
+
+.cartText,
+.boldText {
+  text-decoration: none !important;
+}
+
+.cartWrap a,
+.cartText,
+.ordersWrap a {
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+.cartWrap a:visited {
+  text-decoration: none !important;
+  color: #fff !important;
+}

@@ -1,0 +1,111 @@
+/* Amazon Hero Carousel Styles */
+.heroWrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.heroWrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.carousel .slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.carousel .control-arrow,
+.carousel.carousel-slider .control-arrow {
+  background: rgba(35, 47, 62, 0.7);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel .control-arrow:hover {
+  background: #ff9900;
+}
+.carousel .dot {
+  background: #fff;
+  opacity: 0.6;
+}
+.carousel .dot.selected {
+  background: #ff9900;
+  opacity: 1;
+}
+.heroWrapper {
+  position: relative;
+}
+
+.carouselArrow {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  transform: translateY(-50%);
+  background: rgba(34, 44, 56, 0);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.carouselArrow:hover {
+  opacity: 1;
+}
+
+.carouselArrowPrev {
+  left: 15px;
+}
+
+.carouselArrowNext {
+  right: 15px;
+}
+
+.carouselArrowIcon {
+  filter: drop-shadow(2px 0 4px #fff);
+}
+
+/* Responsive adjustments for arrows */
+@media (max-width: 768px) {
+  .carouselArrow {
+    width: 28px;
+    height: 28px;
+    top: 50%;
+  }
+  .carouselArrowPrev {
+    left: 10px;
+  }
+  .carouselArrowNext {
+    right: 10px;
+  }
+}
+@media (max-width: 900px) {
+  .carousel .slide img {
+    height: 250px;
+  }
+}
+@media (max-width: 600px) {
+  .carousel .slide img {
+    height: 140px;
+  }
+}

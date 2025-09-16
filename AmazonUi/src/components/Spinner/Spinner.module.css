@@ -1,0 +1,12 @@
+/* Spinner styles */
+.spinnerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+  width: 100%;
+}
+.spinnerImg {
+  width: 80px;
+  margin-top: 50px;
+}
