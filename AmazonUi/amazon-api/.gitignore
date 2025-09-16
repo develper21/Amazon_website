@@ -1,0 +1,29 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Prisma generated files
+prisma/dev.db
+prisma/dev.db-journal
+prisma/migrations/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pglite-debug.log
+firebase-debug.log
+
+# VSCode
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+
+serviceAccountKey.json
