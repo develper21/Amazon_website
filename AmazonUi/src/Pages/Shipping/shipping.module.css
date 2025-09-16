@@ -1,0 +1,88 @@
+.shippingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: #f7f6f6;
+}
+.shippingBox {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  padding: 40px 32px 32px 32px;
+  max-width: 700px;
+  width: 100%;
+  margin: 32px 0;
+}
+.shippingBox h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.orderId {
+  font-size: 1.1rem;
+  color: #232f3e;
+  margin-bottom: 24px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.row {
+  display: flex;
+  gap: 24px;
+}
+.inputGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.inputGroup label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #232f3e;
+}
+.inputGroup input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  background: #f9f9f9;
+  transition: border 0.2s;
+}
+.inputGroup input:focus {
+  border: 1.5px solid #ff9900;
+}
+.saveBtn {
+  margin-top: 18px;
+  background: #0088ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(20, 110, 180, 0.04);
+  transition: background 0.2s;
+}
+.saveBtn:hover {
+  background: #005fa3;
+}
+.error {
+  color: #d32f2f;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+@media (max-width: 900px) {
+  .shippingBox {
+    padding: 24px 8px;
+  }
+  .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

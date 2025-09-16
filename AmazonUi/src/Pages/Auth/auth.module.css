@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700;900&display=swap");
+.authWrapper {
+  max-width: 400px;
+  margin: 2000px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(20, 40, 80, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.authWrapper h2 {
+  margin-bottom: 24px;
+  color: #232f3e;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.signinPage {
+  background-color: #f6f5f5;
+  height: 125vh;
+  animation: fadein 0.35s ease;
+}
+
+input {
+  width: 100%;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.amazonLogo {
+  width: 160px;
+}
+
+.loginNavbar {
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  padding-right: 80px;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.signupBtn,
+.signinBtn {
+  cursor: pointer;
+  border: none;
+  background-color: rgb(255, 149, 0);
+  height: 51px;
+  padding: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  border-radius: 7px;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+.topBtn {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  padding: 22px;
+}
+
+.signinBtn {
+  margin-top: 25px;
+}
+
+.signinBtn:hover,
+.signupBtn:hover {
+  background-color: rgb(255, 102, 0);
+}
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.someText {
+  text-align: center;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 30px 30px 30px 30px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  width: 100%;
+  max-width: 430px;
+}
+
+.mainForm {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 30vw;
+  padding-bottom: 22px;
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  margin-top: 0;
+}
+
+.background {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 60px;
+  justify-content: space-between;
+}
+
+.BG1,
+.BG2 {
+  width: 40vw;
+  object-fit: cover;
+}
+
+.user {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.userDesc {
+  font-family: "Poppins", sans-serif;
+  width: 300px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-size: 15px;
+  margin: 12px;
+}
+
+.or {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  padding: 10px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.724);
+  border-top: 1px solid rgba(175, 175, 175, 0.678);
+  border-bottom: 1px solid rgba(175, 175, 175, 0.678);
+  margin: 20px 0;
+}
+
+.email,
+.password,
+.name {
+  height: 51px;
+  width: 100%;
+  max-width: 370px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 10px;
+  outline: none;
+  border: 1px solid rgba(175, 175, 175, 0.678);
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.extraButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.google {
+  width: 100%;
+  max-width: 370px;
+  margin: 0 auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1.5px solid rgba(175, 175, 175, 0.678);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.724);
+  font-size: 18px;
+  border-radius: 7px;
+  transition: all 0.3s ease;
+  height: 51px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.google:hover {
+  background-color: rgb(226, 226, 226);
+}
+
+.googleImg {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.errorMessage {
+  margin-top: 10px;
+  width: 85%;
+  font-family: "Poppins", sans-serif;
+  color: red;
+  font-size: 14px;
+}
+
+.disclaimer {
+  margin-top: 18px;
+  margin-bottom: 0;
+  font-size: 11px;
+  color: #666;
+  text-align: center;
+  background: rgba(245, 245, 245, 0.92);
+  border-radius: 7px;
+  padding: 10px 10px 7px 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  line-height: 1.5;
+  max-width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fakeHighlight {
+  color: #ff9900;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* MEDIA QUERIES  */
+
+@media (max-width: 768px) {
+  .BG1,
+  .BG2 {
+    position: relative;
+    top: 12vw;
+  }
+}
+
+@media (max-width: 460px) {
+  .mainForm {
+    bottom: 20vw;
+  }
+  .signupBtn,
+  .signinBtn {
+    padding: 8px;
+  }
+  .loginNavbar {
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content: space-between;
+  }
+  .amazonLogo {
+    width: 110px;
+  }
+
+  .user {
+    font-size: 30px;
+  }
+  .userDesc {
+    font-size: 15px;
+  }
+}

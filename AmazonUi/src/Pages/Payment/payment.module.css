@@ -1,0 +1,279 @@
+.paymentWrapper {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(20, 40, 80, 0.08);
+  min-height: 300px;
+}
+.paymentWrapper h2 {
+  margin-bottom: 24px;
+  color: #232f3e;
+}
+.paymentSectionWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+  justify-content: center;
+  background: #f7f6f6;
+}
+.paymentBox {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  padding: 30px; /* Adjusted padding */
+  max-width: 700px; /* Increased max-width */
+  width: 100%;
+  margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.paymentTitle {
+  font-size: 1.5rem; /* Maintained */
+  font-weight: bold;
+  margin-bottom: 20px; /* Adjusted margin */
+  text-align: center;
+  color: #333; /* Darker color for title */
+}
+.paymentOptions {
+  display: flex;
+  flex-direction: row; /* Options side-by-side */
+  gap: 25px; /* Increased gap */
+  margin-bottom: 30px; /* Adjusted margin */
+  justify-content: center; /* Center options */
+  width: 100%;
+}
+.radioLabel {
+  font-size: 1rem; /* Adjusted font size */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #555; /* Label color */
+}
+.radioLabel input[type="radio"] {
+  accent-color: #f0c14b; /* Amazon-like yellow for radio button */
+}
+.totalAmount {
+  font-size: 1.1rem; /* Adjusted font size */
+  font-weight: 500;
+  margin-top: 30px; /* Added margin top */
+  margin-bottom: 20px; /* Adjusted margin */
+  text-align: center; /* Centered */
+  width: 100%; /* Full width */
+  color: #333;
+}
+.amount {
+  color: #b12704; /* Amazon price color */
+  font-weight: bold;
+  font-size: 1.2rem; /* Adjusted font size */
+  margin-left: 8px;
+}
+.placeOrderBtn {
+  background-color: #f0c14b; /* Amazon yellow */
+  color: #111; /* Dark text for yellow button */
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+  width: auto; /* Auto width based on content */
+  min-width: 150px; /* Minimum width */
+  border-radius: 3px; /* Sharper corners */
+  padding: 10px 20px; /* Adjusted padding */
+  font-size: 1rem; /* Adjusted font size */
+  font-weight: normal; /* Normal font weight */
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+  transition: background-color 0.2s;
+  display: block; /* Block to allow margin auto */
+  margin: 0 auto; /* Center the button */
+}
+.placeOrderBtn:hover {
+  background-color: #e4b640; /* Darker yellow on hover */
+}
+
+/* Card Details Section */
+.cardDetailsSection {
+  width: 100%;
+  margin-top: 20px; /* Adjusted margin */
+  margin-bottom: 20px; /* Adjusted margin */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px; /* Increased gap */
+}
+
+.cardDetailsHeading {
+  font-size: 1.25rem; /* Size for "Card Details" */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px; /* Space below heading */
+  text-align: left; /* Align to left as per image */
+  width: 100%; /* Take full width to allow text-align left */
+}
+
+.cardDisplay {
+  width: 320px; /* Adjusted width */
+  height: 190px; /* Adjusted height */
+  background: linear-gradient(
+    135deg,
+    #f69d3c,
+    #f0772d
+  ); /* Orange gradient like image */
+  border-radius: 10px; /* Slightly less rounded */
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  position: relative;
+  font-family: "Arial", sans-serif; /* More standard font */
+}
+
+.cardChip {
+  width: 45px; /* Adjusted size */
+  height: auto;
+  position: absolute;
+  top: 25px; /* Adjusted position */
+  left: 25px; /* Adjusted position */
+}
+
+/* .cardLogo - removed as per JSX changes */
+
+.cardNumberDisplay {
+  font-size: 1.5rem; /* Larger font for card number */
+  letter-spacing: 3px; /* Increased spacing */
+  text-align: center;
+  margin-top: 70px; /* Adjusted for new card design */
+  font-family: "Courier New", Courier, monospace;
+}
+
+.cardInfoDisplay {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 0.85rem; /* Adjusted font size */
+  text-transform: uppercase;
+}
+
+.cardHolderNameDisplay {
+  max-width: 65%; /* Adjusted width */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap */
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  margin-bottom: 6px; /* Increased margin */
+  font-size: 0.85rem; /* Adjusted font size */
+  color: #333; /* Darker label */
+  font-weight: bold; /* Bold labels */
+}
+
+.formGroup input {
+  padding: 12px; /* Increased padding */
+  border: 1px solid #a6a6a6; /* Amazon-like border */
+  border-radius: 3px; /* Sharper corners */
+  font-size: 0.95rem; /* Adjusted font size */
+  background-color: #fff; /* White background */
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.07) inset;
+}
+
+.formGroup input:focus {
+  border-color: #e77600;
+  box-shadow: 0 0 3px 2px rgba(228, 121, 17, 0.5);
+  outline: 0;
+}
+
+.formRow {
+  display: flex;
+  gap: 20px; /* Increased gap */
+}
+
+.formRow .formGroup {
+  flex: 1;
+}
+
+.inputError {
+  border-color: #d8000c !important; /* More prominent error color */
+  background-color: #ffd2d2; /* Light red background for error */
+}
+
+.errorMessage {
+  color: #d8000c;
+  font-size: 0.75rem; /* Adjusted font size */
+  margin-top: 4px;
+}
+
+.paymentForm {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* Adjusted breakpoint */
+  .paymentBox {
+    padding: 20px; /* Adjusted padding */
+    max-width: 90vw;
+  }
+  .paymentOptions {
+    flex-direction: column; /* Stack options on smaller screens */
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .cardDisplay {
+    width: 280px;
+    height: 170px;
+  }
+  .cardNumberDisplay {
+    font-size: 1.3rem;
+    margin-top: 60px;
+  }
+  .formRow {
+    flex-direction: column; /* Stack form row elements */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Smaller screen adjustments */
+  .paymentTitle {
+    font-size: 1.3rem;
+  }
+  .cardDisplay {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    min-height: 160px;
+    padding: 15px;
+  }
+  .cardNumberDisplay {
+    font-size: 1.1rem;
+    margin-top: 50px;
+  }
+  .cardChip {
+    width: 40px;
+    top: 15px;
+    left: 15px;
+  }
+  .formGroup input {
+    padding: 10px;
+  }
+  .placeOrderBtn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}

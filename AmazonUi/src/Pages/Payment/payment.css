@@ -1,0 +1,562 @@
+.reviewDelivery input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border: 1.5px solid #e3e6e6;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(20, 40, 80, 0.04);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.reviewDelivery input:focus {
+  border: 1.5px solid #635bff;
+  outline: none;
+  box-shadow: 0 0 0 2px #e3e6f7;
+}
+.iconBtn {
+  background: none;
+  border: none;
+  padding: 4px 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #232f3e;
+  transition: background 0.15s, color 0.15s;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconBtn:hover {
+  background: #f3f3f3;
+  color: #635bff;
+}
+.iconBtn.delete:hover {
+  background: #ffeaea;
+  color: #e74c3c;
+}
+.stripeCheckoutBtn {
+  background-color: #463389 !important;
+}
+.stripeCheckoutBtn:hover:not(:disabled),
+.placeOrderBtn.stripeCheckoutBtn:hover:not(:disabled) {
+  background: #232f3e !important;
+  color: #fff !important;
+}
+/* Supported Cards Row */
+.supportedCardsRow {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin: 24px auto;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  padding-left: 2px;
+}
+.supportedCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 70px;
+  font-size: 0.98rem;
+  color: #232f3e;
+  font-weight: 500;
+  opacity: 0.85;
+  transition: transform 0.15s;
+}
+.supportedCardImg {
+  width: 110px;
+  height: 68px;
+  object-fit: contain;
+  margin-bottom: 2px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  border: 1.5px solid #e3e6e6;
+  padding: 8px 16px;
+  transition: box-shadow 0.15s;
+}
+.visa-img-bg {
+  background: linear-gradient(90deg, #1a237e 70%, #3949ab 100%) !important;
+  border: none !important;
+}
+.supportedCard:hover {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.04);
+}
+@media (max-width: 600px) {
+  .supportedCardsRow {
+    gap: 16px;
+    justify-content: center;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+  .supportedCard {
+    min-width: 60px;
+    font-size: 0.93rem;
+    padding: 4px 6px;
+  }
+  .supportedCardImg {
+    width: 70px;
+    height: 40px;
+    padding: 4px 6px;
+    border-radius: 8px;
+  }
+  .visa-img-bg {
+    background: linear-gradient(90deg, #1a237e 70%, #3949ab 100%) !important;
+    border: none !important;
+  }
+}
+.reviewSection {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  margin-bottom: 32px;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.reviewBlock {
+  background: #f7fafc;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(20, 40, 80, 0.06);
+  padding: 18px 22px 16px 22px;
+  min-width: 260px;
+  flex: 1 1 320px;
+  margin-bottom: 0;
+}
+.reviewHeading {
+  font-size: 1.13rem;
+  font-weight: 600;
+  color: #232f3e;
+  margin-bottom: 10px;
+}
+.reviewDelivery {
+  font-size: 1rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.reviewCartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+.reviewCartItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  padding: 7px 10px;
+}
+.reviewCartImg {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 5px;
+  background: #f3f3f3;
+}
+.reviewCartInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.reviewCartTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #232f3e;
+  margin-bottom: 2px;
+}
+.reviewCartQty {
+  font-size: 0.95rem;
+  color: #555;
+}
+.reviewCartPrice {
+  font-size: 0.97rem;
+  color: #b12704;
+  font-weight: 600;
+}
+@media (max-width: 900px) {
+  .reviewSection {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .reviewBlock {
+    min-width: unset;
+    width: 100%;
+  }
+}
+.stripeCardForm {
+  width: 100%;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+/* Stripe CardElement container improvements */
+.stripeCardBox {
+  width: 100%;
+  min-height: 48px;
+  min-width: 220px;
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #f7fafc 60%, #e3e6e6 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 18px 14px 10px 14px;
+  margin-bottom: 8px;
+  border: 1.5px solid #e3e6e6;
+  transition: box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+}
+.stripeCardBox:focus-within {
+  box-shadow: 0 0 0 2px #f0c14b;
+}
+
+.StripeElement {
+  background: transparent;
+  color: #232f3e;
+  font-size: 1.08rem;
+  min-height: 32px;
+  width: 100%;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  display: block;
+}
+.stripeErrorMsg {
+  color: #d8000c;
+  background: #fff6f6;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 0.97rem;
+  margin-bottom: 4px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+.stripePayBtn {
+  background: linear-gradient(90deg, #f0c14b 60%, #e3e6e6 100%);
+  color: #222;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.08rem;
+  font-weight: 600;
+  padding: 12px 0;
+  width: 100%;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px rgba(240, 193, 75, 0.08);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.stripePayBtn:hover {
+  background: linear-gradient(90deg, #e4b640 60%, #e3e6e6 100%);
+  box-shadow: 0 4px 16px rgba(240, 193, 75, 0.13);
+}
+.radioLabel.selected {
+  color: #f0c14b;
+  font-weight: 600;
+}
+.paymentWrapper {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(20, 40, 80, 0.08);
+  min-height: 300px;
+}
+.paymentWrapper h2 {
+  margin-bottom: 24px;
+  color: #232f3e;
+}
+.paymentSectionWrapper {
+  min-height: 80vh;
+  background: #f7f6f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 40px;
+}
+.paymentBox {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(20, 40, 80, 0.08);
+  padding: 32px 24px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 32px;
+}
+.paymentTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #232f3e;
+  text-align: left;
+  letter-spacing: 0.01em;
+}
+.paymentOptions {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  margin-bottom: 30px;
+  justify-content: center;
+  width: 100%;
+}
+.radioLabel {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #555;
+}
+.radioLabel input[type="radio"] {
+  accent-color: #f0c14b;
+}
+.totalAmount {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  color: #333;
+}
+.amount {
+  color: #b12704;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-left: 8px;
+}
+.placeOrderBtn {
+  background: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 2px auto;
+  transition: background 0.2s;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 2px 12px rgba(20, 40, 80, 0.08);
+}
+.placeOrderBtn:hover {
+  background: #232f3e;
+  color: #fff;
+}
+.totalAmount {
+  background: #fafbfc;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(20, 40, 80, 0.06);
+  padding: 24px 18px 18px 18px;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: inherit;
+}
+.totalAmount > div {
+  margin-bottom: 8px;
+}
+.totalAmount span.amount {
+  color: #b12704;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+.stripeCardForm {
+  margin-top: 18px;
+}
+
+.cardDetailsSection {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.cardDetailsHeading {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.cardDisplay {
+  width: 320px;
+  height: 190px;
+  background: linear-gradient(135deg, #f69d3c, #f0772d);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  position: relative;
+  font-family: "Arial", sans-serif;
+}
+
+.cardChip {
+  width: 45px;
+  height: auto;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.cardNumberDisplay {
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: 70px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.cardInfoDisplay {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.cardHolderNameDisplay {
+  max-width: 65%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.formGroup input {
+  padding: 12px;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  background-color: #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.07) inset;
+}
+
+.formGroup input:focus {
+  border-color: #e77600;
+  box-shadow: 0 0 3px 2px rgba(228, 121, 17, 0.5);
+  outline: 0;
+}
+
+.formRow {
+  display: flex;
+  gap: 20px;
+}
+
+.formRow .formGroup {
+  flex: 1;
+}
+
+.inputError {
+  border-color: #d8000c !important;
+  background-color: #ffd2d2;
+}
+
+.errorMessage {
+  color: #d8000c;
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+.paymentForm {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .paymentBox {
+    padding: 20px;
+    max-width: 90vw;
+  }
+  .paymentOptions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .cardDisplay {
+    width: 280px;
+    height: 170px;
+  }
+  .cardNumberDisplay {
+    font-size: 1.3rem;
+    margin-top: 60px;
+  }
+  .formRow {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .paymentTitle {
+    font-size: 1.3rem;
+  }
+  .cardDisplay {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    min-height: 160px;
+    padding: 15px;
+  }
+  .cardNumberDisplay {
+    font-size: 1.1rem;
+    margin-top: 50px;
+  }
+  .cardChip {
+    width: 40px;
+    top: 15px;
+    left: 15px;
+  }
+  .formGroup input {
+    padding: 10px;
+  }
+  .placeOrderBtn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
